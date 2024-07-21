@@ -632,6 +632,12 @@ static const MemoryRegionOps hpet_ram_ops = {
     .valid = {
         .min_access_size = 4,
         .max_access_size = 8,
+        .unaligned = false,
+    },
+    .impl = {
+        .min_access_size = 4,
+        .max_access_size = 8,
+        .unaligned = false,
     },
     .endianness = DEVICE_NATIVE_ENDIAN,
 };
